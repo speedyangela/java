@@ -3,10 +3,10 @@ package solveur.glouton;
 import sacADos.Objet;
 import java.util.Comparator;
 
-// Classe utilitaire qui contient plusieurs comparateurs (critères gloutons)
+
 public class Comparateurs {
 
-    // Critère fΣ : utilité / somme des coûts
+    
     public static Comparator<Objet> fSigma() {
         return new Comparator<Objet>() {
             @Override
@@ -19,7 +19,7 @@ public class Comparateurs {
         };
     }
 
-    // Critère fmax : utilité / coût max
+    
     public static Comparator<Objet> fMax() {
         return new Comparator<Objet>() {
             @Override
@@ -31,7 +31,7 @@ public class Comparateurs {
         };
     }
 
-    // --- méthodes internes (privées) ---
+    
     private static int somme(int[] tab) {
         int s = 0;
         for (int v : tab) s += v;
