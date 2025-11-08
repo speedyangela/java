@@ -1,8 +1,0 @@
-package appli;
-
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Rayan ne touchera jamais au projet");
-    }
-}
-
