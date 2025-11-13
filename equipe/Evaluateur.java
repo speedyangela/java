@@ -7,5 +7,13 @@ public class Evaluateur extends Personne {
         super(nom, prenom, age);
         this.specialite = cout;
     }
+
+    public String getSpecialite() {
+        return specialite;
+    }
+
+    public void setSpecialite(String specialite) {
+        this.specialite = specialite;
+    }
 }
 

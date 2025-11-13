@@ -7,4 +7,12 @@ public class Expert extends Personne {
         super(nom, prenom, age);
         this.secteur = secteur;
     }
+
+    public String getSecteur() {
+        return secteur;
+    }
+
+    public void setSecteur(String secteur) {
+        this.secteur = secteur;
+    }
 }
