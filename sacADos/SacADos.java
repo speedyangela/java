@@ -1,4 +1,5 @@
 package sacADos;
+
 import java.util.List;
 
 public class SacADos {
@@ -10,4 +11,16 @@ public class SacADos {
         this.budgets = budgets;
         this.objets = objets;
     }
+    public int getDimension() {
+        return dimension;
+    }
+
+    public int[] getBudgets() {
+        return budgets;
+    }
+
+    public List<Objet> getObjets() {
+        return objets;
+    }
+
 }

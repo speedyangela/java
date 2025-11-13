@@ -7,4 +7,14 @@ public class Objet {
         this.utilite = util;
         this.couts = couts;
     }
+    public int getUtilite() {
+        return utilite;
+    }
+
+    public int[] getCouts() {
+        return couts;
+    }
+
 }
+
+
