@@ -1,9 +1,9 @@
 package solveur.hillclimbing;
-
-import sacADos.Objet;
-import sacADos.SacADos;
+ 
 import java.util.ArrayList;
 import java.util.List;
+import sacADos.Objet;
+import sacADos.SacADos;
 
 public class HillClimbing {
 
