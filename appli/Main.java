@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import sacADos.*;
 import solveur.glouton.*;
+import projet.Projet;
 
 public class Main {
 
@@ -28,18 +29,29 @@ public class Main {
         System.out.println("Nombre d'experts : " + equipe.getExperts().size());
         System.out.println();
 
+        List<Projet> projets = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            Projet p = Projet.genererAleatoirement(i);
+            projets.add(p);
+            System.out.println("Projet généré : " + p.getTitre() + " | secteur = " + p.getSecteur() +
+                   " | utilité = " + p.getUtilite() +
+                   " | coûts = [" + p.getCoutEconomique() + ", " + p.getCoutSocial() + ", " + p.getCoutEnvironnemental() + "]");
+        }
+        System.out.println();
+
         int[] budgets = {100, 80, 60};
-        List<Objet> objets = new ArrayList<Objet>();
-        objets.add(new Objet(60, new int[]{30, 20, 10}));
-        objets.add(new Objet(40, new int[]{10, 30, 20}));
-        objets.add(new Objet(30, new int[]{20, 10, 30}));
-        objets.add(new Objet(50, new int[]{40, 20, 10}));
-        objets.add(new Objet(35, new int[]{10, 15, 25}));
+        List<Objet> objets = new ArrayList<>();
+
+        for (Projet p : projets) {
+            int util = p.getUtilite();
+            int[] couts = new int[]{p.getCoutEconomique(), p.getCoutSocial(), p.getCoutEnvironnemental()};
+            objets.add(new Objet(util, couts));
+        }
 
         SacADos sac = new SacADos(3, budgets, objets);
-        System.out.println("Instance de sac à dos créée.");
+        System.out.println("Instance de sac à dos créée depuis les projets.");
         System.out.println("Budgets : [" + budgets[0] + ", " + budgets[1] + ", " + budgets[2] + "]");
-        System.out.println("Nombre d'objets disponibles : " + sac.getObjets().size());
+        System.out.println("Nombre d'objets/projets disponibles : " + sac.getObjets().size());
         System.out.println();
 
         List<Objet> solution = GloutonAjoutSolver.solve(sac, Comparateurs.fSigma());
