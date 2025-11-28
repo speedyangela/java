@@ -19,6 +19,35 @@ public class Projet {
         this.coutSocial = coutS;
         this.coutEnvironnemental = coutEnv;
     }
+    
+        public String getTitre() {
+        return titre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getSecteur() {
+        return secteur;
+    }
+
+    public int getUtilite() {
+        return utilite;
+    }
+
+    public int getCoutEconomique() {
+        return coutEconomique;
+    }
+
+    public int getCoutSocial() {
+        return coutSocial;
+    }
+
+    public int getCoutEnvironnemental() {
+        return coutEnvironnemental;
+    }
+
 
     public static Projet genererAleatoirement(int numero) {
         Random r = new Random();
