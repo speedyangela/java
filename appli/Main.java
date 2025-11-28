@@ -10,7 +10,7 @@ import projet.Projet;
 public class Main {
 
     public static void main(String[] args) {
-
+        /* Création de l'équipe */
         Elu elu = new Elu("Dupont", "Marie", 45);
         Evaluateur evalEco = new Evaluateur("Martin", "Paul", 40, "economique");
         Evaluateur evalSoc = new Evaluateur("Durand", "Claire", 38, "social");
@@ -23,12 +23,12 @@ public class Main {
         equipe.getEvaluateurs().add(evalEnv);
         equipe.getExperts().add(expSport);
         equipe.getExperts().add(expSante);
-        /* Là j'ai mis des print mais c pas obligé jpense, c comme vous voulez */
+        /* Présentation de l'équipe */
         System.out.println("Élu : " + elu.getNom() + " " + elu.getPrenom());
         System.out.println("Nombre d'évaluateurs : " + equipe.getEvaluateurs().size());
         System.out.println("Nombre d'experts : " + equipe.getExperts().size());
         System.out.println();
-
+        /* Génération des projets */
         List<Projet> projets = new ArrayList<>();
         for (int i = 1; i <= 5; i++) {
             Projet p = Projet.genererAleatoirement(i);
@@ -39,7 +39,7 @@ public class Main {
         }
         System.out.println();
 
-        int[] budgets = {100, 80, 60};
+        int[] budgets = {100, 100, 100};
         List<Objet> objets = new ArrayList<>();
 
         for (Projet p : projets) {
