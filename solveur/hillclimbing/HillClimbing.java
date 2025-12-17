@@ -91,4 +91,3 @@ public class HillClimbing {
         return false;
     }
 }
-

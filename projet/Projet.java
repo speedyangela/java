@@ -20,7 +20,7 @@ public class Projet {
         this.coutEnvironnemental = coutEnv;
     }
     
-        public String getTitre() {
+    public String getTitre() {
         return titre;
     }
 
@@ -48,7 +48,26 @@ public class Projet {
         return coutEnvironnemental;
     }
 
+    // --- ICI C'EST LE CODE QU'IL TE MANQUAIT ---
+    // Ces méthodes permettent à l'équipe de modifier les valeurs (Simulation)
+    
+    public void setUtilite(int utilite) {
+        this.utilite = utilite;
+    }
 
+    public void setCoutEconomique(int coutEconomique) {
+        this.coutEconomique = coutEconomique;
+    }
+
+    public void setCoutSocial(int coutSocial) {
+        this.coutSocial = coutSocial;
+    }
+
+    public void setCoutEnvironnemental(int coutEnvironnemental) {
+        this.coutEnvironnemental = coutEnvironnemental;
+    }
+
+    // On garde la méthode statique au cas où, même si on utilise celle de l'Expert maintenant
     public static Projet genererAleatoirement(int numero) {
         Random r = new Random();
         String[] secteurs = {"sport", "santé", "éducation", "culture", "attractivité économique"};
