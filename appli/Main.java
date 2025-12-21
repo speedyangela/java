@@ -120,17 +120,17 @@ public class Main {
         if (choix == 3) {
             System.out.print("Nom du fichier (ex: test.txt) : ");
             String chemin = scanner.nextLine();
-            // On essaie de charger
+            //On essaie de charger
             SacADos s = VersSacADos.lireFichier(chemin);
             if (s != null) {
                 sacADosActuel = s;
-                // On vide la liste de projets car on est passé en mode "Fichier pur"
+                // n vide la liste de projets car on est passé en mode "Fichier pur"
                 projets.clear(); 
             }
             return;
         }
 
-        // Si on n'est pas en mode fichier, il faut des projets !
+        // si on n'est pas en mode fichier il faut des projets 
         if (projets.isEmpty()) {
             System.out.println("ERREUR : Y'a pas de projets générés ! (Fais l'option 1 du menu principal d'abord)");
             return;
@@ -211,7 +211,7 @@ public class Main {
         System.out.println(">> Utilité totale : " + utiliteTotale);
     }
 
-    // Méthode pour pas que ça crash si on tape n'importe quoi
+    // Méthode pour pas que ça crash si on tape nptkoi
     private static int lireEntier() {
         while (true) {
             try {
